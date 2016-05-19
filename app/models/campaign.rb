@@ -1,6 +1,7 @@
 class Campaign < ActiveRecord::Base
   belongs_to :game_master, class_name: "User"
-  #has_many :players
+  has_many :campaign_users
+  has_many :users, through: :campaign_users
 
   before_create :generate_uuid
 
