@@ -19,7 +19,7 @@ class CreateCharacters < ActiveRecord::Migration
   def change
     create_table :characters do |t|
       t.belongs_to :user
-      t.belongs_to :character
+      t.belongs_to :campaign
       t.string :name
       t.string :age
       t.text :description
