@@ -14,7 +14,7 @@ end
     end
 
     def create_character_migration
-      create_migration "db/migrate/create_characters.rb", <<-FILE
+      create_migration "db/migrate/#{Time.now.strftime("%Y%m%d%H%M%S")}_create_characters.rb", <<-FILE
 class CreateCharacters < ActiveRecord::Migration
   def change
     create_table :characters do |t|
